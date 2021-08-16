@@ -1,0 +1,36 @@
+name: End-to-end Tests
+
+on:
+  schedule:
+    # Runs our tests every 3rd day of the week
+    - cron:  '0 0 * * */3'
+  workflow_dispatch:
+    inputs:
+      e2eScript:
+        description: End-to-end test scripts for ECS
+        required: true
+        default: 'v1'
+
+env:
+  DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}
+  DATADOG_CUSTOMER: ${{ secrets.DATADOG_CUSTOMER }}
+  VIRTUAL_DEVICE_TOKEN: ${{ secrets.VIRTUAL_DEVICE_TOKEN }}
+jobs:
+  e2e-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install 
+      
+      - name: Test
+        run: npm test
+      
+      - name: Archive test results
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: test_output
+          path: test_output

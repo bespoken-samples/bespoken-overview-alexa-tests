@@ -1,2 +1,15 @@
-# bespoken-overview-alexa-tests
-Alexa end-to-end tests for the Bespoken Overview skill
+# Bespoken Overview Alexa skill - End to end tests
+
+The Bespoken Overview skill for Amazon Alexa provides a quick look at the tools and services Bespoken offers to its customers. It uses the Alexa Presentation Language on devices with a screen and its available in both English and Spanish.
+
+This project contains the end-to-end tests that make sure that the skill  works correctly and, at the same time, shows the different features that our CLI posseses, including: assertions on a prompt, multiple prompts handling, using homophones, using JSONPath to test against APL directives, and more.
+
+Tests are currently configured to run every 3rd day of the week using Github Actions. Once run, results are available as output artifacts. Results are also pushed to Datadog for easier historical visualization.
+
+### How to run this project locally
+- Clone and download this repository
+- Run npm install
+- Create a new Alexa Virtual Device token in the [Bespoken Dashboard](https://apps.bespoken.io)
+- Fill the the virtual device token value inside `example.env`, then rename to `.env`
+- Remove line 2 on testing.json if you don't want the results being pushed to Datadog.
+- Run the tests by doing `npm test`

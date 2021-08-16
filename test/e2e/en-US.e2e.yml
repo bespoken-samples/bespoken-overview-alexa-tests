@@ -1,0 +1,44 @@
+
+---
+configuration:
+  description: Bespoken Overview
+  locale: en-US
+  voiceId: en-US-Wavenet-D
+
+---
+- test : Launch skill - close session
+- open bespoken overview : Welcome to bespoken overview
+- stop: Goodbye
+
+---
+- test : Ask for unit tests
+- open bespoken overview : Welcome to bespoken overview
+- what is unit testing : Test and debug locally without deployments
+- stop
+
+---
+- test : Ask for end to end tests - multiple prompts
+- open bespoken overview : Welcome to bespoken overview
+- tell me about end to end tests : 
+  - prompt: 
+    - Makes your team 10 times more productive by rapidly accelerating QA
+    - Send real audio to the real Alexa or Google Assistant 
+    - Test the system as a whole
+- stop
+
+--- 
+- test : Ask for unit tests + images on APL
+- open bespoken overview : 
+  - prompt: Welcome to bespoken overview
+- tell me about unit tests : 
+  - prompt: Test and debug locally without deployments
+  - raw.messageBody.directives[3].namespace : Alexa.Presentation.APL
+  - raw.messageBody.directives[3].payload.datasources.data.properties.itemImg: unit-testing-500x500.png
+- stop
+
+---
+- test: Unit tests - precorded audio
+- https://bespoken-overview-skill.s3.amazonaws.com/open+bespoken+overview.mp3:
+  - prompt: Welcome to bespoken overview
+- https://bespoken-overview-skill.s3.amazonaws.com/tell+me+about+unit+tests.mp3:
+  - prompt: Test and debug locally without deployments

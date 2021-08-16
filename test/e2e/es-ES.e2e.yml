@@ -1,0 +1,47 @@
+
+---
+configuration:
+  description: Bespoken Overview
+  locale: es-ES
+  voiceId: es-ES-Wavenet-B
+
+---
+- test : Abrir skill - terminar la sesión
+- abre vistazo a bespoken : Bienvenidos al vistazo a Bespoken
+- parar: 
+  - caption: Hasta luego!
+
+---
+- test : Preguntar por pruebas unitarias
+- abre vistazo a bespoken : Bienvenidos al vistazo a Bespoken
+- háblame de pruebas unitarias : Prueba y depura localmente sin despliegues
+- parar
+
+---
+- test : Preguntar por pruebas punto a punto con multiples respuestas
+- abre vistazo a bespoken : Bienvenidos al vistazo a Bespoken
+- háblame de pruebas punto a punto : 
+  - prompt: 
+    - Haz que tu equipo sea 10X más productivo
+    - Enviamos audio real a los servicios de Alexa o Google
+    - Probar el sistema como un todo
+- parar
+
+--- 
+- test : Preguntar por pruebas unitarias + imágenes de APL
+- abre vistazo a bespoken : 
+  - prompt: Bienvenidos al vistazo a Bespoken
+- háblame de pruebas unitarias : 
+  - prompt: Prueba y depura localmente sin despliegues
+  - raw.messageBody.directives[3].namespace : Alexa.Presentation.APL
+  - raw.messageBody.directives[3].payload.datasources.data.properties.itemImg: unit-testing-500x500.png
+- stop
+
+---
+- test: Pruebas unitarias - audio pregrabado
+- https://bespoken-overview-skill.s3.amazonaws.com/abre+vistazo+a+bespoken.mp3:
+  - prompt: Bienvenidos al vistazo a Bespoken
+- https://bespoken-overview-skill.s3.amazonaws.com/ha%CC%81blame+de+pruebas+unitarias.mp3:
+  - prompt: Prueba y depura localmente sin despliegues
+
+

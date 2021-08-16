@@ -35,7 +35,7 @@ configuration:
   - prompt: Prueba y depura localmente sin despliegues
   - raw.messageBody.directives[3].namespace : Alexa.Presentation.APL
   - raw.messageBody.directives[3].payload.datasources.data.properties.itemImg: unit-testing-500x500.png
-- stop
+- parar
 
 ---
 - test: Pruebas unitarias - audio pregrabado
@@ -43,5 +43,6 @@ configuration:
   - prompt: Bienvenidos al vistazo a Bespoken
 - https://bespoken-overview-skill.s3.amazonaws.com/ha%CC%81blame+de+pruebas+unitarias.mp3:
   - prompt: Prueba y depura localmente sin despliegues
+  - parar
 
 

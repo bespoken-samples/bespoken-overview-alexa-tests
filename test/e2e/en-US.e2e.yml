@@ -42,3 +42,4 @@ configuration:
   - prompt: Welcome to bespoken overview
 - https://bespoken-overview-skill.s3.amazonaws.com/tell+me+about+unit+tests.mp3:
   - prompt: Test and debug locally without deployments
+  - stop

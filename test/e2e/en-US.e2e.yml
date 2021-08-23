@@ -51,8 +51,8 @@ configuration:
 # You can also use your own prerecorded audio instead of speech to text
 ---
 - test: Unit tests - precorded audio
-- https://bespoken-overview-skill.s3.amazonaws.com/open+bespoken+overview.mp3:
+- https://bespoken-overview-skill.s3.amazonaws.com/open+bespoken+overview.mp3 :
   - prompt: Welcome to bespoken overview
-- https://bespoken-overview-skill.s3.amazonaws.com/tell+me+about+unit+tests.mp3:
+- https://bespoken-overview-skill.s3.amazonaws.com/tell+me+about+unit+tests.mp3 :
   - prompt: Test and debug locally without deployments
-  - stop
+- stop

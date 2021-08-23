@@ -51,10 +51,10 @@ configuration:
 # Uso de audio pregrabado, como alternativa al text-to-speech.
 ---
 - test: Pruebas unitarias - audio pregrabado
-- https://bespoken-overview-skill.s3.amazonaws.com/abre+vistazo+a+bespoken.mp3:
+- https://bespoken-overview-skill.s3.amazonaws.com/abre+vistazo+a+bespoken.mp3 :
   - prompt: Bienvenidos al vistazo a Bespoken
-- https://bespoken-overview-skill.s3.amazonaws.com/ha%CC%81blame+de+pruebas+unitarias.mp3:
+- https://bespoken-overview-skill.s3.amazonaws.com/ha%CC%81blame+de+pruebas+unitarias.mp3 :
   - prompt: Prueba y depura localmente sin despliegues
-  - parar
+- parar
 
 

@@ -14,4 +14,5 @@ Tests are currently configured to run every 3rd day of the week using Github Act
 - Create a new Alexa Virtual Device token in the [Bespoken Dashboard](https://apps.bespoken.io)
 - Fill the the virtual device token value inside `example.env`, then rename to `.env`
 - Remove line 2 on testing.json if you don't want the results being pushed to Datadog.
-- Run the tests by doing `npm test`
+- Take a look at the tests files under the `test/e2e` folder
+- Run these tests by doing `npm test`

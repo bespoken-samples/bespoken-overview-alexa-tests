@@ -42,7 +42,7 @@ configuration:
 - test : Ask for unit tests + images on APL
 - open bespoken overview : 
   - prompt: Welcome to bespoken overview
-- tell me about unit tests : 
+- tell me about unit testing : 
   - prompt: Test and debug locally without deployments
   - raw.messageBody.directives[3].namespace : Alexa.Presentation.APL
   - raw.messageBody.directives[3].payload.datasources.data.properties.itemImg: unit-testing-500x500.png

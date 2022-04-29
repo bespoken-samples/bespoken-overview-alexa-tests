@@ -10,7 +10,7 @@
 configuration:
   description: Bespoken Overview
   locale: en-US
-  voiceId: en-US-Wavenet-D
+  voiceId: en-US-Wavenet-A
 
 # Our first test launches the skill and does an assertion on the the prompt that 
 # comes back from the skill. The stop utterance is sent to close the skill session.
@@ -30,7 +30,7 @@ configuration:
 ---
 - test : Ask for end to end tests - multiple prompts
 - open bespoken overview : Welcome to bespoken overview
-- tell me about end to end tests : 
+- tell me about end to end testing : 
   - prompt: 
     - Makes your team 10 times more productive by rapidly accelerating QA
     - Send real audio to the real Alexa or Google Assistant 
@@ -53,6 +53,6 @@ configuration:
 - test: Unit tests - precorded audio
 - https://bespoken-overview-skill.s3.amazonaws.com/open+bespoken+overview.mp3 :
   - prompt: Welcome to bespoken overview
-- https://bespoken-overview-skill.s3.amazonaws.com/tell+me+about+unit+tests.mp3 :
+- tell me about unit testing :
   - prompt: Test and debug locally without deployments
 - stop

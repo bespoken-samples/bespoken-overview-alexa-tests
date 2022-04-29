@@ -2,7 +2,7 @@
     "filter": "./node_modules/bespoken-datadog-plugin/index.js",
     "asyncMode": true,
     "homophones": {
-        "test and debug": ["testing debug"]
+        "test and debug": ["testing debug", "Justin deberg"]
     },
     "trace": true,
     "type": "e2e",

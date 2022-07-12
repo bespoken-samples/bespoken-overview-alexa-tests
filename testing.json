@@ -4,6 +4,7 @@
     "homophones": {
         "test and debug": ["testing debug", "Justin deberg"]
     },
+    "projectId": "scintillating-asimov",
     "trace": true,
     "type": "e2e",
     "virtualDeviceToken": "${VIRTUAL_DEVICE_TOKEN}"

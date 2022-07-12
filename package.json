@@ -4,7 +4,9 @@
   "description": "End to end tests for the Bespoken Overview Alexa skill",
   "main": "index.js",
   "scripts": {
-    "test": "bst test"
+    "test": "bst test",
+    "test-US": "bst test test/e2e/en-US.e2e.yml",
+    "test-ES": "bst test test/e2e/es-ES.e2e.yml"
   },
   "repository": {
     "type": "git",

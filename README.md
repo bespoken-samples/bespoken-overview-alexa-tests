@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/6411740/129514336-d8db394e-fffa-4f93-9e8d-0c94e4512bac.png)
 
-The Bespoken Overview skill for Amazon Alexa provides a quick look at the tools and services Bespoken offers to its customers. It uses the Alexa Presentation Language on devices with a screen and its available in both English and Spanish.
+The [Bespoken Overview skill for Amazon Alexa](https://www.amazon.com/Bespoken-Overview/dp/B09FLQG7SC) provides a quick look at the tools and services Bespoken offers to its customers. It uses the Alexa Presentation Language on devices with a screen and its available in both English and Spanish.
 
 This project contains the end-to-end tests that make sure that the skill  works correctly and, at the same time, shows the different features that our CLI posseses, including: assertions on a prompt, multiple prompts handling, using homophones, using JSONPath to test against APL directives, and more.
 

@@ -20,6 +20,6 @@
   "homepage": "https://github.com/bespoken-samples/bespoken-overview-alexa-tests#readme",
   "dependencies": {
     "bespoken-datadog-plugin": "^1.1.1",
-    "bespoken-tools": "^2.4.100"
+    "bespoken-tools": "^2.6.0"
   }
 }

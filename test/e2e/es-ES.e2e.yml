@@ -15,21 +15,21 @@ configuration:
 # que devuelve el skill. "Parar" es incluido para forzar el fin de la sesión.
 ---
 - test : Abrir skill - terminar la sesión
-- abre vistazo a bespoken : Bienvenidos al vistazo a Bespoken
+- abre vistazo a. bespoken : Bienvenidos al vistazo a Bespoken
 - parar: 
   - caption: Hasta luego!
 
 # El segundo test abre el skill y pregunta por una de las opciones disponibles
 ---
 - test : Preguntar por pruebas unitarias
-- abre vistazo a bespoken : Bienvenidos al vistazo a Bespoken
+- abre vistazo a. bespoken : Bienvenidos al vistazo a Bespoken
 - háblame de pruebas unitarias : Prueba y depura localmente sin despliegues
 - parar
 
 # Validar una opción que tiene múltiples diversas respuestas.
 ---
 - test : Preguntar por pruebas punto a punto con multiples respuestas
-- abre vistazo a bespoken : Bienvenidos al vistazo a Bespoken
+- abre vistazo a. bespoken : Bienvenidos al vistazo a Bespoken
 - háblame de pruebas punto a punto : 
   - prompt: 
     - Haz que tu equipo sea 10X más productivo
@@ -40,7 +40,7 @@ configuration:
 # Uso de JSONPath para evaluar el contenido de las directivas
 --- 
 - test : Preguntar por pruebas unitarias + imágenes de APL
-- abre vistazo a bespoken : 
+- abre vistazo a. bespoken : 
   - prompt: Bienvenidos al vistazo a Bespoken
 - háblame de pruebas unitarias : 
   - prompt: Prueba y depura localmente sin despliegues
@@ -50,7 +50,7 @@ configuration:
 
 # Uso de audio pregrabado, como alternativa al text-to-speech.
 ---
-- test: Pruebas unitarias - audio pregrabado
+- test.skip: Pruebas unitarias - audio pregrabado
 - https://bespoken-overview-skill.s3.amazonaws.com/abre+vistazo+a+bespoken.mp3 :
   - prompt: Bienvenidos al vistazo a Bespoken
 - https://bespoken-overview-skill.s3.amazonaws.com/ha%CC%81blame+de+pruebas+unitarias.mp3 :
